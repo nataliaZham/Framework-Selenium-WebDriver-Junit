@@ -8,7 +8,9 @@ import static quanTests.pages.RestaurantPage.*;
 import static org.hamcrest.CoreMatchers.containsString;
 import static org.hamcrest.MatcherAssert.assertThat;
 
-
+/**
+ * Class RestaurantPageTest contains tests for the https://www.quandoo.de/en/place/cavallino-rosso
+ */
 public class RestaurantPageTest extends BaseTest {
 
     /**

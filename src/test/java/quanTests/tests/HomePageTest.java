@@ -10,6 +10,9 @@ import static quanTests.pages.HomePage.TEXT_RESTAURANT_IN_BERLIN;
 import static quanTests.pages.HomePage.TEXT_RESTAURANT_IN_COLOGNE;
 import static org.hamcrest.MatcherAssert.assertThat;
 
+/**
+ * Class HomePageTest contains tests for the https://www.quandoo.de/en/
+ */
 public class HomePageTest extends BaseTest {
 
     /**

@@ -6,7 +6,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 /**
- * Abstract class representation of a Page in the UI. Page object pattern
+ * Abstract class Page contains common locators, data and methods shared within the Quandoo pages.
  */
 public abstract class Page {
 
@@ -19,16 +19,14 @@ public abstract class Page {
 
 
     /**
-     * Constructor injecting the WebDriver interface
+     * @param driver
      */
     public Page(WebDriver driver) {
         Page.driver = driver;
         PageFactory.initElements(driver, this);
     }
 
-    /**
-     * locator valid for all tests
-     */
+    //locator valid for all tests
     @FindBy(id = "CybotCookiebotDialogBodyLevelButtonLevelOptinAllowAll")
     static WebElement acceptCookies;
 

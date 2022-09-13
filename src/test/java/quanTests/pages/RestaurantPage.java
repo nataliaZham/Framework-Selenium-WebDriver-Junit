@@ -4,6 +4,9 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
+/**
+ * Class RestaurantPage contains restaurant page locators and methods
+ */
 public class RestaurantPage extends Page {
 
     /**
@@ -24,51 +27,28 @@ public class RestaurantPage extends Page {
         super(driver);
     }
 
-    /**
-     * photos button locator
-     */
+    // locators
     @FindBy(xpath = "//*[@data-qa='sub-nav-tab-tab-photos']")
     static WebElement photosBtn;
 
-    /**
-     * menu button locator
-     */
     @FindBy(xpath = "//*[@data-qa='sub-nav-tab-tab-menu']")
     static WebElement menuBtn;
 
-    /**
-     * reserveNow button locator
-     */
     @FindBy(xpath = "//*[@data-qa='reservation-tab']")
     static WebElement reserveNowBtn;
 
-    /**
-     * reviews button locator
-     */
     @FindBy(xpath = "//*[@data-qa='sub-nav-tab-tab-reviews']")
     static WebElement reviewsBtn;
 
-    /**
-     * text above photos locator
-     */
     @FindBy(xpath = "//*[@data-qa='sub-nav-tab-tab-photos']/div/h2")
     static WebElement textAbovePhotosBtn;
 
-    /**
-     * text above menu locator
-     */
     @FindBy(xpath = "//*[@id='content']/div/div/h2")
     static WebElement textAboveMenuBtn;
 
-    /**
-     * reserveNow button text locator
-     */
     @FindBy(xpath = "//*[@data-qa='checkout-title']")
     static WebElement reserveNowBtnText;
 
-    /**
-     * text above reviews button locator
-     */
     @FindBy(xpath = "//div[3]/div/div/h2")
     static WebElement textAboveReviewsBtn;
 
@@ -105,7 +85,7 @@ public class RestaurantPage extends Page {
     }
 
     /**
-     * this method gets the text from the text above photos button locator
+     * this method gets text from the text above photos button locator
      */
     public String getTextAbovePhoto() throws InterruptedException {
         Thread.sleep(4000);
@@ -113,7 +93,7 @@ public class RestaurantPage extends Page {
     }
 
     /**
-     * this method gets the text from the text above menu button locator
+     * this method gets text from the text above menu button locator
      */
     public String getTextAboveMenu() throws InterruptedException {
         Thread.sleep(4000);
@@ -121,7 +101,7 @@ public class RestaurantPage extends Page {
     }
 
     /**
-     * this method gets the text from the reserveNow button text locator
+     * this method gets text from the reserveNow button text locator
      */
     public String getReserveNowText() throws InterruptedException {
         Thread.sleep(4000);
@@ -129,7 +109,7 @@ public class RestaurantPage extends Page {
     }
 
     /**
-     * this method gets the text from the text above reviews button locator
+     * this method gets text from the text above reviews button locator
      */
     public String getTextAboveReviews() throws InterruptedException {
         Thread.sleep(5000);

@@ -7,6 +7,9 @@ import org.junit.Before;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
+/**
+ * Class BaseTest contains methods that initialize common settings
+ */
 public class BaseTest {
 
     protected WebDriver driver;

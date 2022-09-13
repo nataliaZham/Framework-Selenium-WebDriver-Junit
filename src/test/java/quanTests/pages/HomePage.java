@@ -5,11 +5,13 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
-
+/**
+ * Class HomePage contains home page locators and methods
+ */
 public class HomePage extends Page {
 
     /**
-     * test data
+     * test constants
      */
     public static String TEXT_RESTAURANT_IN_BERLIN = "Restaurants in Berlin";
     public static String TEXT_RESTAURANT_IN_COLOGNE = "Restaurants in Cologne";
@@ -23,27 +25,16 @@ public class HomePage extends Page {
         super(driver);
     }
 
-    /**
-     * Berlin button locator
-     */
+    //locators
     @FindBy(xpath = "//div[3]/div/div/div/a/h4")
     static WebElement berlinBtn;
 
-    /**
-     * Coln button locator
-     */
     @FindBy(xpath = "//div[3]/div/div/div/a[2]/h4")
     static WebElement colnBtn;
 
-    /**
-     * text Berlin button locator
-     */
     @FindBy(xpath = "//h1")
     static WebElement textBerlinBtn;
 
-    /**
-     * text Coln button locator
-     */
     @FindBy(xpath = "//h1")
     static WebElement textColnBtn;
 
@@ -64,7 +55,7 @@ public class HomePage extends Page {
     }
 
     /**
-     * this method gets the text from the text Berlin button locator
+     * this method gets text from the text Berlin button locator
      */
     public String getTextBerlinBtn() throws InterruptedException {
         Thread.sleep(4000);
@@ -72,7 +63,7 @@ public class HomePage extends Page {
     }
 
     /**
-     * this method gets the text from the text Coln button locator
+     * this method gets text from the text Coln button locator
      */
     public String getTextColnBtn() throws InterruptedException {
         Thread.sleep(4000);
