@@ -38,33 +38,22 @@ public class HomePage extends Page {
     @FindBy(xpath = "//h1")
     static WebElement textColnBtn;
 
-    /**
-     * this method makes a click on the Berlin button locator
-     */
+    //methods
     public void clickOnTheBerlinBtn() throws InterruptedException {
         berlinBtn.click();
         Thread.sleep(5000);
     }
 
-    /**
-     * this method makes a click on the Coln button locator
-     */
     public void clickOnTheColnBtn() throws InterruptedException {
         colnBtn.click();
         Thread.sleep(5000);
     }
 
-    /**
-     * this method gets text from the text Berlin button locator
-     */
     public String getTextBerlinBtn() throws InterruptedException {
         Thread.sleep(4000);
         return textBerlinBtn.getText();
     }
 
-    /**
-     * this method gets text from the text Coln button locator
-     */
     public String getTextColnBtn() throws InterruptedException {
         Thread.sleep(4000);
         return textColnBtn.getText();

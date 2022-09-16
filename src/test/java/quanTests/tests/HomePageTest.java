@@ -8,10 +8,11 @@ import static org.hamcrest.CoreMatchers.containsString;
 import static quanTests.pages.Page.BASE_URL;
 import static quanTests.pages.HomePage.TEXT_RESTAURANT_IN_BERLIN;
 import static quanTests.pages.HomePage.TEXT_RESTAURANT_IN_COLOGNE;
+
 import static org.hamcrest.MatcherAssert.assertThat;
 
 /**
- * Class HomePageTest contains tests for the https://www.quandoo.de/en/
+ * Class HomePageTest contains tests for Quandoo homepage
  */
 public class HomePageTest extends BaseTest {
 
@@ -25,9 +26,7 @@ public class HomePageTest extends BaseTest {
         homePage.clickAcceptCookiesButton();
     }
 
-    /**
-     * this test makes a click on the berlin button locator and checks text using a constant
-     */
+    // this test makes a click on the Berlin button and checks that the correct page has opened
     @Test
     public void checkTextBerlinBtn() throws InterruptedException {
         Thread.sleep(4000);
@@ -35,9 +34,7 @@ public class HomePageTest extends BaseTest {
         assertThat(homePage.getTextBerlinBtn(), containsString(TEXT_RESTAURANT_IN_BERLIN));
     }
 
-    /**
-     * this test makes a click on the coln button locator and checks text using a constant
-     */
+    // this test makes a click on the Coln button and checks that the correct page has opened
     @Test
     public void checkTextColnBtn() throws InterruptedException {
         Thread.sleep(4000);

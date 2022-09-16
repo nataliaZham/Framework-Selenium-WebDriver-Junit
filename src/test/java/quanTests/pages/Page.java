@@ -1,5 +1,6 @@
 package quanTests.pages;
 
+import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -10,13 +11,13 @@ import org.openqa.selenium.support.PageFactory;
  */
 public abstract class Page {
 
+    //classes
     private static WebDriver driver;
 
     /**
      * constant url
      */
     public static String BASE_URL = "https://www.quandoo.de";
-
 
     /**
      * @param driver
@@ -26,15 +27,19 @@ public abstract class Page {
         PageFactory.initElements(driver, this);
     }
 
-    //locator valid for all tests
+    //locators
     @FindBy(id = "CybotCookiebotDialogBodyLevelButtonLevelOptinAllowAll")
     static WebElement acceptCookies;
 
-    /**
-     * this method makes a click on cookies
-     */
+    //methods
     public void clickAcceptCookiesButton() {
-        acceptCookies.click();
-    }
+        try {
+            if (acceptCookies.isDisplayed()) {
+                acceptCookies.click();
+            }
+        } catch (NoSuchElementException e) {
+            //
+        }
 
+    }
 }

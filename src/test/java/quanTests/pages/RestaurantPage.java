@@ -52,65 +52,42 @@ public class RestaurantPage extends Page {
     @FindBy(xpath = "//div[3]/div/div/h2")
     static WebElement textAboveReviewsBtn;
 
-    /**
-     * this method makes a click on the photo button locator
-     */
+    //methods
     public void clickOnPhotosBtn() throws InterruptedException {
         photosBtn.click();
         Thread.sleep(5000);
     }
 
-    /**
-     * this method makes a click on the menu button locator
-     */
     public void clickOnMenuBtn() throws InterruptedException {
         menuBtn.click();
         Thread.sleep(5000);
     }
 
-    /**
-     * this method makes a click on the reserveNow button locator
-     */
     public void clickOnReserveNowBtn() throws InterruptedException {
         Thread.sleep(5000);
         reserveNowBtn.click();
     }
 
-    /**
-     * this method makes a click on the reviews button locator
-     */
     public void clickOnReviewsBtn() throws InterruptedException {
         Thread.sleep(5000);
         reviewsBtn.click();
     }
 
-    /**
-     * this method gets text from the text above photos button locator
-     */
     public String getTextAbovePhoto() throws InterruptedException {
         Thread.sleep(4000);
         return textAbovePhotosBtn.getText();
     }
 
-    /**
-     * this method gets text from the text above menu button locator
-     */
     public String getTextAboveMenu() throws InterruptedException {
         Thread.sleep(4000);
         return textAboveMenuBtn.getText();
     }
 
-    /**
-     * this method gets text from the reserveNow button text locator
-     */
     public String getReserveNowText() throws InterruptedException {
         Thread.sleep(4000);
         return reserveNowBtnText.getText();
     }
 
-    /**
-     * this method gets text from the text above reviews button locator
-     */
     public String getTextAboveReviews() throws InterruptedException {
         Thread.sleep(5000);
         return textAboveReviewsBtn.getText();

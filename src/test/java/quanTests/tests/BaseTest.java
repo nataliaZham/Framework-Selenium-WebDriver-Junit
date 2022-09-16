@@ -12,6 +12,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
  */
 public class BaseTest {
 
+    //classes
     protected WebDriver driver;
     protected RestaurantPage restaurantPage;
     protected HomePage homePage;

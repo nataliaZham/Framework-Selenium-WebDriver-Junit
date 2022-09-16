@@ -9,7 +9,7 @@ import static org.hamcrest.CoreMatchers.containsString;
 import static org.hamcrest.MatcherAssert.assertThat;
 
 /**
- * Class RestaurantPageTest contains tests for the https://www.quandoo.de/en/place/cavallino-rosso
+ * Class RestaurantPageTest contains tests for Quandoo restaurant page
  */
 public class RestaurantPageTest extends BaseTest {
 
@@ -23,36 +23,28 @@ public class RestaurantPageTest extends BaseTest {
         restaurantPage.clickAcceptCookiesButton();
     }
 
-    /**
-     * this test makes a click on the photo button locator and checks text using a constant
-     */
+    // this test clicks on the photos button and makes sure there is text below the photos
     @Test
     public void checkTextUnderThePhoto() throws InterruptedException {
         restaurantPage.clickOnPhotosBtn();
         assertThat(restaurantPage.getTextAbovePhoto(), containsString(TEXT_PHOTOS_OF));
     }
 
-    /**
-     * this test makes a click on the menu button locator and checks text using a constant
-     */
+    // this test clicks on the menu button and makes sure there is text below the menu
     @Test
     public void checkTextUnderTheMenu() throws InterruptedException {
         restaurantPage.clickOnMenuBtn();
         assertThat(restaurantPage.getTextAboveMenu(), containsString(TEXT_MENU_FROM));
     }
 
-    /**
-     * this test makes a click on the reserveNow button locator and checks text using a constant
-     */
+    // this test clicks on the reserveNow button and checks that the correct page has opened
     @Test
     public void checkReserveNowButton() throws InterruptedException {
         restaurantPage.clickOnReserveNowBtn();
         assertThat(restaurantPage.getReserveNowText(), containsString(TEXT_COMPLETE_YOUR_RESERVATION));
     }
 
-    /**
-     * this test makes a click on the reviews button locator and checks text using a constant
-     */
+    // this test clicks on the reviews button and makes sure there is text below the reviews
     @Test
     public void checkTextUnderTheReviews() throws InterruptedException {
         restaurantPage.clickOnReviewsBtn();
